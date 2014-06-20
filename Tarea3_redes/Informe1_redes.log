@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.25)  19 JUN 2014 13:44
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.10.25)  20 JUN 2014 16:41
 entering extended mode
 **Informe1_redes.tex
-(C:\Users\Felipe\Desktop\Tarea3_redes\Informe1_redes.tex
+(C:\Users\Felipe\Documents\GitHub\tarea-3-redes\Tarea3_redes\Informe1_redes.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
 , bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
@@ -272,7 +272,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box30
 \@float@everytoks=\toks23
 \@floatcapt=\box31
-) (C:\Users\Felipe\Desktop\Tarea3_redes\Informe1_redes.aux)
+)
+(C:\Users\Felipe\Documents\GitHub\tarea-3-redes\Tarea3_redes\Informe1_redes.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
@@ -333,28 +334,117 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--22
 
 [1
 
-{C:/Users/Felipe/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Felipe/Desktop/Tarea3_redes/logo_latex.png
->] <ruta1_moodle.png, id=11, 648.92438pt x 531.48563pt>
+{C:/Users/Felipe/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Felipe/Documents/GitHub/tarea-3-redes/Tare
+a3_redes/logo_latex.png>] <ruta1_moodle.png, id=11, 648.92438pt x 531.48563pt>
 File: ruta1_moodle.png Graphic file (type png)
  <use ruta1_moodle.png>
 Package pdftex.def Info: ruta1_moodle.png used on input line 49.
 (pdftex.def)             Requested size: 345.0pt x 282.57pt.
- [2 <C:/Users/Felipe/Desktop/Tarea3_redes/ruta1_moodle.png>] (C:\Users\Felipe\Desktop\Tarea3_redes\Informe1_redes.aux) )
- 
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--52
+
+ []
+
+<ruta1_google.png, id=12, 648.92438pt x 530.73282pt>
+File: ruta1_google.png Graphic file (type png)
+ <use ruta1_google.png>
+Package pdftex.def Info: ruta1_google.png used on input line 61.
+(pdftex.def)             Requested size: 345.0pt x 282.16977pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--64
+
+ []
+
+[2 <C:/Users/Felipe/Documents/GitHub/tarea-3-redes/Tarea3_redes/ruta1_moodle.png>] [3 <C:/Users/Felipe/Documents/GitHub/
+tarea-3-redes/Tarea3_redes/ruta1_google.png>] <ruta1_cime.png, id=21, 651.18282pt x 532.99126pt>
+File: ruta1_cime.png Graphic file (type png)
+ <use ruta1_cime.png>
+Package pdftex.def Info: ruta1_cime.png used on input line 73.
+(pdftex.def)             Requested size: 345.0pt x 282.38643pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--76
+
+ []
+
+[4 <C:/Users/Felipe/Documents/GitHub/tarea-3-redes/Tarea3_redes/ruta1_cime.png>]
+<ruta1_wikipedia.png, id=26, 646.66594pt x 534.49687pt>
+File: ruta1_wikipedia.png Graphic file (type png)
+ <use ruta1_wikipedia.png>
+Package pdftex.def Info: ruta1_wikipedia.png used on input line 85.
+(pdftex.def)             Requested size: 345.0pt x 285.1578pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--88
+
+ []
+
+[5 <C:/Users/Felipe/Documents/GitHub/tarea-3-redes/Tarea3_redes/ruta1_wikipedia.png>]
+<ruta1_embchile.png, id=31, 646.66594pt x 531.48563pt>
+File: ruta1_embchile.png Graphic file (type png)
+ <use ruta1_embchile.png>
+Package pdftex.def Info: ruta1_embchile.png used on input line 97.
+(pdftex.def)             Requested size: 345.0pt x 283.5513pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--109
+
+ []
+
+[6 <C:/Users/Felipe/Documents/GitHub/tarea-3-redes/Tarea3_redes/ruta1_embchile.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+<mapamundo_enlaces.png, id=36, 618.05907pt x 356.83313pt>
+File: mapamundo_enlaces.png Graphic file (type png)
+ <use mapamundo_enlaces.png>
+Package pdftex.def Info: mapamundo_enlaces.png used on input line 122.
+(pdftex.def)             Requested size: 345.0pt x 199.18814pt.
+ [7]
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+[8 <C:/Users/Felipe/Documents/GitHub/tarea-3-redes/Tarea3_redes/mapamundo_enlaces.png>]
+(C:\Users\Felipe\Documents\GitHub\tarea-3-redes\Tarea3_redes\Informe1_redes.aux) ) 
 Here is how much of TeX's memory you used:
- 5566 strings out of 493921
- 80995 string characters out of 3147278
- 139286 words of memory out of 3000000
- 8828 multiletter control sequences out of 15000+200000
+ 5598 strings out of 493921
+ 81755 string characters out of 3147278
+ 142286 words of memory out of 3000000
+ 8855 multiletter control sequences out of 15000+200000
  25380 words of font info for 22 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,5n,42p,284b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pf
-b>
-Output written on Informe1_redes.pdf (2 pages, 369285 bytes).
+ 44i,6n,42p,762b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc
+/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/lm/lmr12.pfb>
+Output written on Informe1_redes.pdf (8 pages, 1767073 bytes).
 PDF statistics:
- 27 PDF objects out of 1000 (max. 8388607)
+ 61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
