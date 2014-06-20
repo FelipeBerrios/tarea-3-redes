@@ -2,6 +2,57 @@ from numpy import *
 
 A,B,C,D,E,F,G,H,I= 0,1,2,3,4,5,6,7,8
 
+miarchivo=open("tablas.txt","w")
+def Obtenervecinos(X):
+	listavecinos=[]
+	for i in range(0,len(vecinos)):
+		
+		if X==i:
+			if i==0:
+				listavecinos.append("A")
+			elif i==1:
+				listavecinos.append("B")
+			elif i==2:
+				listavecinos.append("C")
+			elif i==3:
+				listavecinos.append("D")
+			elif i==4:
+				listavecinos.append("E")
+			elif i==5:
+				listavecinos.append("F")
+			elif i==6:
+				listavecinos.append("G")
+			elif i==7:
+				listavecinos.append("H")
+			elif i==8:
+				listavecinos.append("I")
+			else:
+				return "error"
+			continue
+		if EsVecino(X,i):
+			if i==0:
+				listavecinos.append("A")
+			elif i==1:
+				listavecinos.append("B")
+			elif i==2:
+				listavecinos.append("C")
+			elif i==3:
+				listavecinos.append("D")
+			elif i==4:
+				listavecinos.append("E")
+			elif i==5:
+				listavecinos.append("F")
+			elif i==6:
+				listavecinos.append("G")
+			elif i==7:
+				listavecinos.append("H")
+			elif i==8:
+				listavecinos.append("I")
+			else:
+				return "error"
+
+	return listavecinos
+
 def AsociarTabla(i):
 	if i==0:
 		return costosA
@@ -23,6 +74,47 @@ def AsociarTabla(i):
 		return costosI
 	else:
 		return "error"
+
+def ImprimirTablas(lista):
+	for x in lista:
+		for i in range(0,len(x)):
+			for j in range(0,len(x[0])):
+				print x[i][j],"\t|",
+				miarchivo.write(str(x[i][j])+"\t|")
+			print
+			miarchivo.write("\n")
+			for j in range(0,len(x[0])):
+				print "---\t|",
+				miarchivo.write("---\t|")
+			print
+			miarchivo.write("\n")
+		print "\n"
+		miarchivo.write("\n")
+
+
+def FormatearTabla(tabla,X):
+	listatotal=["/","A","B","C","D","E","F","G","H","I"]
+	tabla2=array(tabla)
+	lista=[]
+	listavecinos=Obtenervecinos(X)
+	for i in range(0,len(tabla)):
+		if not EsVecino(X,i):
+			if X==i:
+				continue
+			lista.append(i)
+	tabla2=delete(tabla2,lista,0)
+	tablaf=[listatotal]
+	aux=[]
+	for i in range(0,len(tabla2)):
+		aux=[]
+		aux.append(listavecinos[i])
+		for j in range(0,len(tabla2[0])):
+			aux.append(tabla2[i][j])
+		tablaf.append(aux)	
+	return tablaf
+
+	
+
 
 def EnviarVector(X):
 	tabla=AsociarTabla(X)
@@ -50,9 +142,10 @@ def BellmanFord(D):
 	for i in range(0,destino.shape[1]):
 		min=destino[D][i]
 		for j in range(0,destino.shape[0]):
-			aux=destino[D][j]+ destino[j][i]
-			if aux<min:
-				min=aux
+			if EsVecino(D,j):
+				aux=destino[D][j]+ destino[j][i]
+				if aux<min:
+					min=aux
 		destino[D][i]=min	
 
 
@@ -154,6 +247,16 @@ costos[I][D]=2
 costos[I][E]=1
 costos[I][H]=3
 
+ListaA=[]
+ListaB=[]
+ListaC=[]
+ListaD=[]
+ListaE=[]
+ListaF=[]
+ListaG=[]
+ListaH=[]
+ListaI=[]
+
 costosA= CrearTablaNodo(A)
 costosB= CrearTablaNodo(B)
 costosC= CrearTablaNodo(C)
@@ -163,6 +266,17 @@ costosF= CrearTablaNodo(F)
 costosG= CrearTablaNodo(G)
 costosH= CrearTablaNodo(H)
 costosI= CrearTablaNodo(I)
+
+ListaA.append(FormatearTabla(array(costosA),A))
+ListaB.append(FormatearTabla(array(costosB),B))
+ListaC.append(FormatearTabla(array(costosC),C))
+ListaD.append(FormatearTabla(array(costosD),D))
+ListaE.append(FormatearTabla(array(costosE),E))
+ListaF.append(FormatearTabla(array(costosF),F))
+ListaG.append(FormatearTabla(array(costosG),G))
+ListaH.append(FormatearTabla(array(costosH),H))
+ListaI.append(FormatearTabla(array(costosI),I))
+
 
 costosAanterior= array(costosA)
 costosBanterior= array(costosB)
@@ -184,7 +298,15 @@ AsignarVecinos(G)
 AsignarVecinos(H)
 AsignarVecinos(I)
 
-
+ListaA.append(FormatearTabla(array(costosA),A))
+ListaB.append(FormatearTabla(array(costosB),B))
+ListaC.append(FormatearTabla(array(costosC),C))
+ListaD.append(FormatearTabla(array(costosD),D))
+ListaE.append(FormatearTabla(array(costosE),E))
+ListaF.append(FormatearTabla(array(costosF),F))
+ListaG.append(FormatearTabla(array(costosG),G))
+ListaH.append(FormatearTabla(array(costosH),H))
+ListaI.append(FormatearTabla(array(costosI),I))
 
 cambio=9
 
@@ -227,36 +349,89 @@ while cambio>0:
 		BellmanFord(I)
 		cambio+=1
 
+	if cambio==0:
+		ListaA.append(FormatearTabla(array(costosA),A))
+		ListaB.append(FormatearTabla(array(costosB),B))
+		ListaC.append(FormatearTabla(array(costosC),C))
+		ListaD.append(FormatearTabla(array(costosD),D))
+		ListaE.append(FormatearTabla(array(costosE),E))
+		ListaF.append(FormatearTabla(array(costosF),F))
+		ListaG.append(FormatearTabla(array(costosG),G))
+		ListaH.append(FormatearTabla(array(costosH),H))
+		ListaI.append(FormatearTabla(array(costosI),I))
+
 	if not array_equal(costosAanterior[A],costosA[A]):
+		costosAanterior[A]=costosA[A]
 		EnviarVector(A)
 
 	if not array_equal(costosBanterior[B],costosB[B]):
+		costosBanterior[B]=costosB[B]
 		EnviarVector(B)
 
 	if not array_equal(costosCanterior[C],costosC[C]):
+		costosCanterior[C]=costosC[C]
 		EnviarVector(C)
 
 	if not array_equal(costosDanterior[D],costosD[D]):
+		costosDanterior[D]=costosD[D]
 		EnviarVector(D)
 
 	if not array_equal(costosEanterior[E],costosE[E]):
+		costosEanterior[E]=costosE[E]
 		EnviarVector(E)
 
 	if not array_equal(costosFanterior[F],costosF[F]):
+		costosFanterior[F]=costosF[F]
 		EnviarVector(F)
 
 	if not array_equal(costosGanterior[G],costosG[G]):
+		costosGanterior[G]=costosG[G]
 		EnviarVector(G)
 
 	if not array_equal(costosHanterior[H],costosH[H]):
+		costosHanterior[H]=costosH[H]
 		EnviarVector(H)
 
 	if not array_equal(costosIanterior[I],costosI[I]):
+		costosIanterior[I]=costosI[I]
 		EnviarVector(I)
 
+#listavecinosA=Obtenervecinos(A)
+#ImprimirTablas(ListaA,listavecinosA)	
+print "Router A\n"
+miarchivo.write("Router A\n\n")
+ImprimirTablas(ListaA)
 
+print "Router B\n"
+miarchivo.write("Router B\n\n")
+ImprimirTablas(ListaB)
 
+print "Router C\n"
+miarchivo.write("Router C\n\n")
+ImprimirTablas(ListaC)
 
+print "Router D\n"
+miarchivo.write("Router D\n\n")
+ImprimirTablas(ListaD)
 
-print costosC
+print "Router E\n"
+miarchivo.write("Router E\n\n")
+ImprimirTablas(ListaE)
 
+print "Router F\n"
+miarchivo.write("Router F\n\n")
+ImprimirTablas(ListaF)
+
+print "Router G\n"
+miarchivo.write("Router G\n\n")
+ImprimirTablas(ListaG)
+
+print "Router H\n"
+miarchivo.write("Router H\n\n")
+ImprimirTablas(ListaH)
+
+print "Router I\n"
+miarchivo.write("Router I\n\n")
+ImprimirTablas(ListaI)
+
+miarchivo.close()
